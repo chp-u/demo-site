@@ -31,6 +31,19 @@ export function LPDetailModal({ item, onClose }: Props) {
     };
   }, [item]);
 
+  const renderDemoLink = (className: string) =>
+    item ? (
+      <a
+        className={`${styles.link} ${className}`}
+        href={item.url}
+        target="_blank"
+        rel="noreferrer noopener"
+      >
+        <span>デモサイトを開く</span>
+        <ExternalLink size={14} aria-hidden />
+      </a>
+    ) : null;
+
   return (
     <dialog
       ref={dialogRef}
@@ -115,17 +128,10 @@ export function LPDetailModal({ item, onClose }: Props) {
 
 
 
-              <a
-                className={styles.link}
-                href={item.url}
-                target="_blank"
-                rel="noreferrer noopener"
-              >
-                <span>デモサイトを開く</span>
-                <ExternalLink size={14} aria-hidden />
-              </a>
+              {renderDemoLink(styles.linkDesktop)}
             </aside>
           </div>
+          <footer className={styles.mobileFooter}>{renderDemoLink(styles.linkMobile)}</footer>
         </div>
       )}
     </dialog>
