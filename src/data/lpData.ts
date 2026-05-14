@@ -1,12 +1,13 @@
 import type { Color, Industry, LPItem, Taste } from '../types/lp';
 
-export const INDUSTRIES: Industry[] = ['Beauty', 'Food', 'Stay'];
+export const INDUSTRIES: Industry[] = ['Beauty', 'Food', 'Stay', 'entertainment'];
 export const TASTES: Taste[] = ['Pop', 'Simple', 'Luxury', 'Trust'];
 
 export const INDUSTRY_LABELS: Record<Industry, string> = {
   Beauty: '美容',
   Food: '飲食',
   Stay: '宿泊',
+  entertainment: '娯楽',
 };
 
 export const COLOR_LABELS: Record<Color, string> = {
@@ -149,6 +150,16 @@ export const lpData: LPItem[] = [
     categories: {
       industry: 'Stay',
     },
-    description: '宿泊施設',
+    description: '宿泊施設LP',
+  },
+  {
+    id: 'lp-013',
+    title: '雀荘和',
+    url: 'https://mahjong-1q0.pages.dev/',
+    thumbnail: thumb('lp-013'),
+    categories: {
+      industry: 'entertainment',
+    },
+    description: '雀荘LP',
   },
 ];

@@ -1,4 +1,4 @@
-export type Industry = 'Beauty' | 'Food' | 'Stay' ;
+export type Industry = 'Beauty' | 'Food' | 'Stay' | 'entertainment';
 export type Color = 'Red' | 'Blue' | 'Green' | 'Monotone' | 'Colorful';
 export type Taste = 'Pop' | 'Simple' | 'Luxury' | 'Trust';
 
